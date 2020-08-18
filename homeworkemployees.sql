@@ -75,13 +75,12 @@ Salaries.salary
 from Employees, Salaries
 Where Employees.emp_no = Salaries.emp_no;
 
---2) List employees who were hired in 1986
--- select emp_no, first_name, last_name, hire_date
-SELECT Hire_date FROM Employees
-where Hire_date between '1985/31/12' and 1987/1/1
--- where Hire_date between '01/01/1986' and '12/31/1986';
--- Where hire_date  >= ''
--- and hire_date < '01/01/1987';
+--2) 
+SELECT 	first_name,
+		last_name,
+		Hire_date
+FROM 	Employees
+WHERE 	Hire_date LIKE '%1986%';
 
 --3)
 SELECT Department.dept_number,
