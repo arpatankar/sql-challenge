@@ -59,3 +59,26 @@ CREATE TABLE titles (
 select *
 from titles;
 
+DELETE FROM titles
+WHERE title = 'title';
+
+DELETE FROM Salaries
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Dept_Emp
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Employees
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Dept_manager
+WHERE dept_number = 'dept_no'
+AND emp_no = 'emp_no';
+
+DELETE FROM Department
+WHERE dept_number = 'dept_no'
+AND dept_name = 'dept_name';
+
+
+
+
