@@ -18,7 +18,6 @@ CREATE TABLE Employees (
 	PRIMARY KEY (emp_no)
 	);
 	
-
 select *
 from Employees;
 
@@ -28,7 +27,7 @@ CREATE TABLE Dept_manager (
 	FOREIGN KEY (emp_no) REFERENCES Employees(emp_no),
 	FOREIGN KEY (dept_number) REFERENCES Department(dept_number)
 	);
-
+	
 select *
 from Dept_manager;
 
@@ -46,6 +45,7 @@ CREATE TABLE Salaries (
 	salary VARCHAR (30) NOT NULL,
 	foreign key (emp_no) references Employees (emp_no)
 	);
+	
 
 select *
 from Salaries;
@@ -58,6 +58,27 @@ CREATE TABLE titles (
 
 select *
 from titles;
+
+DELETE FROM titles
+WHERE title = 'title';
+
+DELETE FROM Salaries
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Dept_Emp
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Employees
+WHERE emp_no = 'emp_no';
+
+DELETE FROM Dept_manager
+WHERE dept_number = 'dept_no'
+AND emp_no = 'emp_no';
+
+DELETE FROM Department
+WHERE dept_number = 'dept_no'
+AND dept_name = 'dept_name';
+
 
 --Data Analysis
 --1)
